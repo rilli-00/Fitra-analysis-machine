@@ -1,43 +1,51 @@
-# Fitra Machine Learning System
+# ⚙️ Fitra Machine Learning System
 
-## Overview
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-blue.svg" alt="Python Version">
+  <img src="https://img.shields.io/badge/TensorFlow-2.x-orange.svg" alt="TensorFlow">
+  <img src="https://img.shields.io/badge/Gradio-UI-ff5500.svg" alt="Gradio">
+  <img src="https://img.shields.io/badge/Whisper-AI-green.svg" alt="Whisper">
+</p>
 
-This repository contains the machine learning component of the Fitra platform, an AI-powered system designed to analyze YouTube content and identify videos that may contain LGBTQ+ topics for children.
+## 📌 Project Mission
+**Fitra Machine Learning System** is an AI-powered solution explicitly designed to **protect children from sexually deviant content on YouTube**. By leveraging advanced Machine Learning (ML) and Natural Language Processing (NLP), the system scans video metadata and audio transcripts to detect inappropriate agendas, ensuring a safe and clean digital environment for kids.
 
-The system performs the following tasks:
+---
 
-* Collecting and preparing video data.
-* Processing and cleaning text transcripts.
-* Training deep learning models for content classification.
-* Evaluating model performance using standard metrics.
-* Analyzing new content and generating predictions.
+## 🚀 How It Works
+The system analyzes YouTube videos through a simple 3-step pipeline:
+1. **Audio & Text Extraction:** Downloads the video's audio and uses **OpenAI Whisper** to transcribe the speech into text (NLP).
+2. **AI Analysis:** Processes the text and metadata using a hybrid **CNN-LSTM** deep learning model.
+3. **Classification:** Instantly flags whether the content is safe or unsafe.
 
-## Project Structure
+---
 
-* Data Collection: Scripts used to gather and prepare datasets.
-* Model Training: Training pipeline for the CNN-LSTM classification model.
-* Model Evaluation: Performance evaluation and metrics analysis.
-* Content Analysis: Applying the trained model to new content.
-* Report: Documentation of the machine learning methodology and results.
+## 🛠️ Technologies Used
+* **AI & Deep Learning:** Python, TensorFlow / Keras, Scikit-learn
+* **Natural Language Processing (NLP):** FastText (Gensim), OpenAI Whisper
+* **Data & Automation:** yt-dlp, NumPy, Pandas
+* **Interface:** Gradio
 
-## Technologies Used
+---
 
-* Python
-* TensorFlow / Keras
-* Pandas
-* NumPy
-* Scikit-learn
-* Whisper Speech Recognition
+## 🎯 Classification Goals
+* **Safe (غير شاذ):** Clean, wholesome content perfectly suitable for children.
+* **Unsafe (شاذ):** Contains sexually deviant themes or inappropriate agendas targeting kids.
 
-## Model Objective
+---
 
-The model is designed to classify content into:
+## 💻 How to Run the Project
 
-* Safe
-* unsafe
 
-to support content moderation and parental control features within the Fitra platform.
+Follow these steps to set up and launch the web interface on your Google Colab:
+Follow these steps to set up and launch the web interface on Google Colab:
 
-## Author
+1. Upload the project files to your Colab environment (or mount Google Drive) so that `app.py` and all required files are available.
 
-Reem Abdullah Alharbi
+2. Download or place the required model files in your working directory:
+- CNN_LSTM_reinforced.h5
+- fasttext_model.model
+
+3. Make sure the model paths inside the code are correct and point to the actual location of the files in Colab (for example `/content/` or your Google Drive path).
+
+4. Run the project
